@@ -113,10 +113,27 @@
     }, 550);
   }
 
+  // ── Soru kaydı: satış sinyali analitiği (PHP'de rapora düşer; statikte sessizce yerelde birikir) ──
+  function soruKaydet(s) {
+    try {
+      var anahtar = 'portal_sorular_' + MARKA;
+      var liste = JSON.parse(localStorage.getItem(anahtar) || '[]');
+      liste.push({ t: new Date().toISOString().slice(0, 16), s: s.slice(0, 140) });
+      localStorage.setItem(anahtar, JSON.stringify(liste.slice(-50)));
+    } catch (e) { }
+    try {
+      navigator.sendBeacon('/track.php', new Blob([JSON.stringify({
+        m: MARKA, k: (window.PORTAL && window.PORTAL.kisi) || '', s: 'asistan',
+        ev: [{ b: 'soru: ' + s.slice(0, 70), t: 1 }]
+      })], { type: 'application/json' }));
+    } catch (e) { }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     var s = giris.value.trim(); if (!s) return;
     mesaj('ben', s.replace(/</g, '&lt;')); giris.value = '';
+    soruKaydet(s);
     yanitla(s);
   });
 

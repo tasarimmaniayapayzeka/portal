@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>tasarımmania — Marka Sunum &amp; Strateji Portalı</title>
+<meta name="description" content="TasarımMania müşterilerine özel sunum, strateji ve rapor portalları. Markanıza özel adres, size özel içerik." />
+<meta name="theme-color" content="#05070d" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070b14'/%3E%3Cpath d='M16 6l2.6 6.8L26 15l-7.4 2.2L16 24l-2.6-6.8L6 15l7.4-2.2z' fill='%2322d3ee'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<section class="hero" style="min-height:100vh;display:flex;align-items:center">
+  <div class="wrap" style="text-align:center;max-width:680px">
+    <div style="font-family:var(--font-head);font-weight:800;font-size:26px;margin-bottom:26px"><span style="color:var(--cyan)">✦</span> tasarımmania</div>
+    <span class="kicker">Marka Sunum &amp; Strateji Portalı</span>
+    <h1 style="margin-top:8px">Markanıza özel adres,<br><span class="grad">size özel strateji.</span></h1>
+    <p class="hero-intro" style="margin:18px auto 30px">Hizmet verdiğimiz her marka için özel hazırlanan sunum, strateji ve rapor odaları. Size iletilen marka kodunuzla girin.</p>
+    <form onsubmit="var k=this.kod.value.toLowerCase().replace(/[^a-z0-9-]/g,'');if(k)location.href=k+'/';return false" style="display:flex;gap:10px;max-width:420px;margin:0 auto">
+      <input name="kod" placeholder="marka-kodunuz" autocomplete="off"
+        style="flex:1;padding:14px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--text);font-size:15px;outline:none" />
+      <button type="submit" class="btn btn-wa" style="border:none;cursor:pointer;font-family:var(--font-body)">Gir →</button>
+    </form>
+    <p style="font-size:12px;color:var(--muted-2);margin-top:34px">Kodunuz yok mu? <a href="https://wa.me/905547916545" style="color:var(--cyan)">WhatsApp'tan yazın</a> · Her sunum PIN korumalıdır ve yalnızca ilgili markayla paylaşılır.</p>
+  </div>
+</section>
+</body>
+</html>

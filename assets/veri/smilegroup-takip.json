@@ -1,37 +1,172 @@
 {
-  "guncelleme": "27 Temmuz 2026",
-  "faz": { "ad": "Faz 1 · Ağustos Hazırlığı", "tamamlanma": 18 },
+  "guncelleme": "28 Temmuz 2026",
+  "faz": {
+    "ad": "Faz 1 · Ağustos Hazırlığı",
+    "tamamlanma": 18
+  },
   "taslar": [
-    { "durum": "tamam",  "baslik": "6 aylık strateji sunumu teslim edildi", "detay": "Genel + Detay + Sosyal & YouTube · 3 sayfa", "tarih": "27 Tem", "sorumlu": "tasarımmania" },
-    { "durum": "tamam",  "baslik": "PIN korumalı sunum portalı açıldı", "detay": "Takip + karar + varlık + teklif sekmeleriyle", "tarih": "27 Tem", "sorumlu": "tasarımmania" },
-    { "durum": "devam",  "baslik": "Kampanya arşivinin mevzuat denetimi", "detay": "10 kampanyanın dil/hedefleme uyum kontrolü + eksik reklam metinleri", "tarih": "1. hafta Ağu", "sorumlu": "tasarımmania" },
-    { "durum": "marka",  "baslik": "Uluslararası Sağlık Turizmi Yetki Belgesi teyidi", "detay": "Belge durumu bildirilmeli — yurt dışı reklamın yasal ön şartı.", "link": "kararlar", "linkMetin": "Kararlar sekmesinden tek tıkla bildirin", "tarih": "Ağu 1. hafta", "sorumlu": "Smile Group" },
-    { "durum": "marka",  "baslik": "Strateji onayı + bütçe senaryosu seçimi", "detay": "MİNİMUM / ÖNERİLEN / AGRESİF", "link": "kararlar", "linkMetin": "Kararlar sekmesi", "tarih": "Bu hafta", "sorumlu": "Smile Group" },
-    { "durum": "sirada", "baslik": "@smilegroup_international hesap düzeni + ilk 30 gönderi", "detay": "Bio revizyonu, HealthTürkiye + yetki belgesi highlight'ı, hazır 3 dilli setlerin akıtılması", "tarih": "Ağu 1-2. hafta", "sorumlu": "tasarımmania" },
-    { "durum": "sirada", "baslik": "4 dilli WhatsApp hattı + karşılama botu MVP", "detay": "", "tarih": "Ağu 2. hafta", "sorumlu": "tasarımmania" },
-    { "durum": "sirada", "baslik": "Uluslararası site v1 (EN) + piksel/CAPI kurulumu", "detay": "", "tarih": "Ağu 2-3. hafta", "sorumlu": "tasarımmania" },
-    { "durum": "sirada", "baslik": "İlk çekim günü (12 video: YT 8 + IG setleri)", "detay": "Senaryolar İçerik Takvimi'nde hazır — Ağustos listesi çekilecek", "tarih": "Ağu 3. hafta", "sorumlu": "birlikte" },
-    { "durum": "sirada", "baslik": "AI Gülüş Analizi MVP (60 saniye testi)", "detay": "", "tarih": "Ağu 3-4. hafta", "sorumlu": "tasarımmania" },
-    { "durum": "sirada", "baslik": "UK pilot kampanya lansmanı", "detay": "Anti-\"Turkey Teeth\" + NHS Search + AI analiz hunisi", "tarih": "Eylül 1. hafta", "sorumlu": "tasarımmania" }
+    {
+      "durum": "tamam",
+      "baslik": "6 aylık strateji sunumu teslim edildi",
+      "detay": "Genel + Detay + Sosyal & YouTube · 3 sayfa",
+      "tarih": "27 Tem",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "tamam",
+      "baslik": "PIN korumalı sunum portalı açıldı",
+      "detay": "Takip + karar + varlık + teklif sekmeleriyle",
+      "tarih": "27 Tem",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "devam",
+      "baslik": "Kampanya arşivinin mevzuat denetimi",
+      "detay": "10 kampanyanın dil/hedefleme uyum kontrolü + eksik reklam metinleri",
+      "tarih": "1. hafta Ağu",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "marka",
+      "baslik": "Uluslararası Sağlık Turizmi Yetki Belgesi teyidi",
+      "detay": "Belge durumu bildirilmeli — yurt dışı reklamın yasal ön şartı.",
+      "link": "kararlar",
+      "linkMetin": "Kararlar sekmesinden tek tıkla bildirin",
+      "tarih": "Ağu 1. hafta",
+      "sorumlu": "Smile Group"
+    },
+    {
+      "durum": "marka",
+      "baslik": "Strateji onayı + bütçe senaryosu seçimi",
+      "detay": "MİNİMUM / ÖNERİLEN / AGRESİF",
+      "link": "kararlar",
+      "linkMetin": "Kararlar sekmesi",
+      "tarih": "Bu hafta",
+      "sorumlu": "Smile Group"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "@smilegroup_international hesap düzeni + ilk 30 gönderi",
+      "detay": "Bio revizyonu, HealthTürkiye + yetki belgesi highlight'ı, hazır 3 dilli setlerin akıtılması",
+      "tarih": "Ağu 1-2. hafta",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "4 dilli WhatsApp hattı + karşılama botu MVP",
+      "detay": "",
+      "tarih": "Ağu 2. hafta",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "Uluslararası site v1 (EN) + piksel/CAPI kurulumu",
+      "detay": "",
+      "tarih": "Ağu 2-3. hafta",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "İlk çekim günü (12 video: YT 8 + IG setleri)",
+      "detay": "Senaryolar İçerik Takvimi'nde hazır — Ağustos listesi çekilecek",
+      "tarih": "Ağu 3. hafta",
+      "sorumlu": "birlikte"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "AI Gülüş Analizi MVP (60 saniye testi)",
+      "detay": "",
+      "tarih": "Ağu 3-4. hafta",
+      "sorumlu": "tasarımmania"
+    },
+    {
+      "durum": "sirada",
+      "baslik": "UK pilot kampanya lansmanı",
+      "detay": "Anti-\"Turkey Teeth\" + NHS Search + AI analiz hunisi",
+      "tarih": "Eylül 1. hafta",
+      "sorumlu": "tasarımmania"
+    }
   ],
   "aktivite": [
-    { "tarih": "27 Tem 2026", "olay": "Takip ve Kararlar sekmeleri canlı veri sistemine bağlandı — artık haftalık güncellenir." },
-    { "tarih": "27 Tem 2026", "olay": "Sunum portalı yayına alındı: Takip, Kararlar, Varlıklar, Teklif ve Karne sekmeleri eklendi; portal asistanı (💬) devrede." },
-    { "tarih": "27 Tem 2026", "olay": "Sosyal & YouTube stratejisi yayınlandı: 2 kanal mimarisi + ay ay 8+8 çekim listeleri (192 ana + 192 yedek başlık)." },
-    { "tarih": "27 Tem 2026", "olay": "Detay strateji yayınlandı: 4 pazar + yurt içi rakip analizi + TR/AB bütçe senaryoları." },
-    { "tarih": "27 Tem 2026", "olay": "Instagram hesap analizi tamamlandı: @smilegroup.tr 14K / @smilegroup_international 105 takipçi tespiti ve büyüme planı." },
-    { "tarih": "27 Tem 2026", "olay": "6 kampanyalık arşiv tarandı: 4 tasarım varyantı × 3 dil envanteri çıkarıldı, lansman planına bağlandı." }
+    {
+      "tarih": "28 Tem 2026",
+      "olay": "Portal tasarimmania.tr adresinde yayında; otomatik deploy hattı kuruldu — güncellemeler dakikalar içinde kendiliğinden canlıya geçiyor."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "Takip ve Kararlar sekmeleri canlı veri sistemine bağlandı — artık haftalık güncellenir."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "Sunum portalı yayına alındı: Takip, Kararlar, Varlıklar, Teklif ve Karne sekmeleri eklendi; portal asistanı (💬) devrede."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "Sosyal & YouTube stratejisi yayınlandı: 2 kanal mimarisi + ay ay 8+8 çekim listeleri (192 ana + 192 yedek başlık)."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "Detay strateji yayınlandı: 4 pazar + yurt içi rakip analizi + TR/AB bütçe senaryoları."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "Instagram hesap analizi tamamlandı: @smilegroup.tr 14K / @smilegroup_international 105 takipçi tespiti ve büyüme planı."
+    },
+    {
+      "tarih": "27 Tem 2026",
+      "olay": "6 kampanyalık arşiv tarandı: 4 tasarım varyantı × 3 dil envanteri çıkarıldı, lansman planına bağlandı."
+    }
   ],
   "kpi": [
-    { "metrik": "Instagram TR takipçi", "bugun": "14.000", "hedef": "20.000+", "durum": "başlangıç öncesi" },
-    { "metrik": "Instagram INT takipçi", "bugun": "105", "hedef": "5.000+", "durum": "başlangıç öncesi" },
-    { "metrik": "YouTube abone (TR + INT)", "bugun": "0", "hedef": "5.000 + 2.000", "durum": "kanal kurulacak" },
-    { "metrik": "Aylık nitelikli lead", "bugun": "—", "hedef": "1.200+", "durum": "Eylül'de başlar" },
-    { "metrik": "Aylık depozito", "bugun": "—", "hedef": "85+", "durum": "Eylül'de başlar" },
-    { "metrik": "Doğrulanmış yorum (Trustpilot+Google)", "bugun": "kayıt altına alınacak", "hedef": "500+", "durum": "kanıt hattı kurulacak" },
-    { "metrik": "İlk yanıt süresi (lead)", "bugun": "—", "hedef": "< 5 dk", "durum": "SLA tanımlanacak" }
+    {
+      "metrik": "Instagram TR takipçi",
+      "bugun": "14.000",
+      "hedef": "20.000+",
+      "durum": "başlangıç öncesi"
+    },
+    {
+      "metrik": "Instagram INT takipçi",
+      "bugun": "105",
+      "hedef": "5.000+",
+      "durum": "başlangıç öncesi"
+    },
+    {
+      "metrik": "YouTube abone (TR + INT)",
+      "bugun": "0",
+      "hedef": "5.000 + 2.000",
+      "durum": "kanal kurulacak"
+    },
+    {
+      "metrik": "Aylık nitelikli lead",
+      "bugun": "—",
+      "hedef": "1.200+",
+      "durum": "Eylül'de başlar"
+    },
+    {
+      "metrik": "Aylık depozito",
+      "bugun": "—",
+      "hedef": "85+",
+      "durum": "Eylül'de başlar"
+    },
+    {
+      "metrik": "Doğrulanmış yorum (Trustpilot+Google)",
+      "bugun": "kayıt altına alınacak",
+      "hedef": "500+",
+      "durum": "kanıt hattı kurulacak"
+    },
+    {
+      "metrik": "İlk yanıt süresi (lead)",
+      "bugun": "—",
+      "hedef": "< 5 dk",
+      "durum": "SLA tanımlanacak"
+    }
   ],
   "kararGecmisi": [
-    { "tarih": "27 Tem 2026", "karar": "Sunum portalı yayına alındı — strateji inceleme süreci başladı", "veren": "tasarımmania", "kanal": "Portal" }
+    {
+      "tarih": "27 Tem 2026",
+      "karar": "Sunum portalı yayına alındı — strateji inceleme süreci başladı",
+      "veren": "tasarımmania",
+      "kanal": "Portal"
+    }
   ]
 }

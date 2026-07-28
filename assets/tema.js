@@ -5,9 +5,9 @@
   var MARKA = (window.PORTAL && window.PORTAL.marka) || (location.pathname.split('/').filter(Boolean)[0] || 'genel');
   var ANAHTAR = 'tm_tema_' + MARKA;
   var TEMALAR = [
-    { id: 'gece', ikon: '🌙', ad: 'Gece modu' },
-    { id: 'acik', ikon: '☀️', ad: 'Gündüz modu' },
-    { id: 'sade', ikon: '📖', ad: 'Sade okuma modu' }
+    { id: 'gece', ikon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>', ad: 'Gece modu' },
+    { id: 'acik', ikon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/><path d="M12 2.4v2.2M12 19.4v2.2M4.2 12H2M22 12h-2.2M5.6 5.6l1.6 1.6M16.8 16.8l1.6 1.6M18.4 5.6l-1.6 1.6M7.2 16.8l-1.6 1.6"/></svg>', ad: 'Gündüz modu' },
+    { id: 'sade', ikon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H10a2 2 0 0 1 2 2v14a1.5 1.5 0 0 0-1.5-1.5h-5A2.5 2.5 0 0 1 3 15z"/><path d="M21 5.5A2.5 2.5 0 0 0 18.5 3H14a2 2 0 0 0-2 2v14a1.5 1.5 0 0 1 1.5-1.5h5A2.5 2.5 0 0 0 21 15z"/></svg>', ad: 'Sade okuma modu' }
   ];
 
   function uygula(id) {
@@ -30,7 +30,7 @@
     TEMALAR.forEach(function (t) {
       var b = document.createElement('button');
       b.type = 'button';
-      b.textContent = t.ikon;
+      b.innerHTML = t.ikon;
       b.title = t.ad;
       b.setAttribute('aria-label', t.ad);
       if (t.id === secili) b.classList.add('on');

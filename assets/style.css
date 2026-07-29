@@ -298,19 +298,64 @@ html[data-tema="acik"] .gun h6,html[data-tema="sade"] .gun h6{color:#075e70}
 
 /* ═══════════════════════════════════════════════════════════
    MOBİL MENÜ — 21 sekme telefonda ekranı kaplıyordu.
-   Artık tek satırlık yatay kaydırma şeridi; grup başlıkları
-   gizlenir, alt sayfalar doğrudan erişilir.
+   Artık ☰ butonuyla açılan tam ekran panel; tema seçici ve
+   çıkış butonu üst çubukta her zaman erişilebilir kalır.
+   ═══════════════════════════════════════════════════════════ */
+.menu-btn{display:none}
+@media(max-width:820px){
+  /* backdrop-filter, içindeki position:fixed panelini kendine hapsediyordu — mobilde kapalı */
+  .topbar{gap:8px;padding:9px 14px;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--bg)}
+  .brand{font-size:14px;min-width:0;flex:1}
+  .menu-btn{display:grid;place-items:center;width:36px;height:34px;flex:0 0 auto;order:9;
+    border:1px solid var(--line);border-radius:10px;background:linear-gradient(180deg,var(--surface-2),var(--surface));
+    color:var(--text);cursor:pointer;padding:0;transition:transform .18s,border-color .18s}
+  .menu-btn svg{width:19px;height:19px}
+  .menu-btn:active{transform:scale(.92)}
+  body.menu-acik .menu-btn{border-color:var(--cyan);color:var(--cyan)}
+
+  /* kapalıyken: yalnız tema seçici + çıkış görünür */
+  .topnav{gap:4px;align-items:center;flex-wrap:nowrap}
+  .topnav>a,.topnav>.dd{display:none}
+
+  /* açıkken: tam ekran dikey panel */
+  body.menu-acik{overflow:hidden}
+  body.menu-acik .topnav{position:fixed;top:53px;left:0;right:0;bottom:0;z-index:60;
+    display:flex;flex-direction:column;align-items:stretch;gap:2px;
+    background:var(--bg);border-top:1px solid var(--line);padding:14px 16px 40px;overflow-y:auto}
+  body.menu-acik .topnav>a{display:block;font-size:14px;padding:12px 14px;border-radius:10px;border:1px solid transparent}
+  body.menu-acik .topnav>a.on{border-color:var(--cyan)}
+  body.menu-acik .topnav>.dd{display:block;padding:0;margin-top:10px}
+  body.menu-acik .dd>a:first-child{display:block;font-size:11px;font-weight:800;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--cyan);padding:8px 14px 4px;pointer-events:none}
+  body.menu-acik .dd-menu{position:static;display:flex;flex-direction:column;gap:2px;
+    box-shadow:none;background:transparent;border:none;padding:0;min-width:0}
+  body.menu-acik .dd-menu::before{display:none}
+  body.menu-acik .dd-menu a{font-size:13.5px;padding:10px 14px 10px 22px;border-radius:10px}
+  body.menu-acik .dd-menu .lbl{display:none}
+  body.menu-acik .dd-menu .sep{margin:6px 14px}
+  body.menu-acik .tema-sec,body.menu-acik .cikis-btn{position:fixed;top:10px;z-index:61}
+  body.menu-acik .tema-sec{right:98px}
+  body.menu-acik .cikis-btn{right:60px}
+}
+
+/* ═══════════════════════════════════════════════════════════
+   KUTU İÇİ TAŞMALAR — dar ekranda içerik kartın dışına çıkıyordu
    ═══════════════════════════════════════════════════════════ */
 @media(max-width:820px){
-  .topbar{flex-direction:column;align-items:stretch;gap:9px;padding:10px 14px}
-  .topnav{flex-wrap:nowrap;overflow-x:auto;gap:5px;padding-bottom:3px;scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch}
-  .topnav::-webkit-scrollbar{display:none}
-  .topnav>a{white-space:nowrap;flex:0 0 auto}
-  .dd{display:flex;align-items:center;gap:5px;flex:0 0 auto;padding-bottom:0}
-  .dd>a:first-child{display:none}
-  .dd-menu{flex-direction:row;gap:5px;align-items:center}
-  .dd-menu a{white-space:nowrap;flex:0 0 auto}
-  .dd-menu .lbl,.dd-menu .sep{display:none}
+  .card,.kamp,.stat,.fstep,.gun,.vid,.month,.brow,details.bilgi{min-width:0}
+  .card>*,.fstep>*,.gun>*{max-width:100%}
+  .card,.fstep,.gun,.saat p,.tick li,.strip{overflow-wrap:anywhere}
+  .flow{flex-direction:column}
+  .fstep{min-width:0;width:100%}
+  .saat{grid-template-columns:64px 1fr;gap:9px}
+  .saat .s{font-size:12.5px}
+  .hero-stats{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+  details.bilgi .oku{grid-template-columns:1fr}
+  details.bilgi>summary{font-size:13px;padding:13px 14px}
+  details.bilgi .ic{padding:4px 14px 16px}
+  .rnk{flex-direction:column;gap:8px}
+  /* tablolar zaten .card[overflow-x:auto] içinde — sayfa değil kart kaysın */
+  .card>table.t,.card table.t{min-width:480px}
 }
 
 /* dar telefonlarda skor çubukları: etiket üstte, çubuk altta */

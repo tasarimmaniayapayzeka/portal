@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"portal-statik","runtimeExecutable":"node","runtimeArgs":["srv.js"],"port":5641}]}

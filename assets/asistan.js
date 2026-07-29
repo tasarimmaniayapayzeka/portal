@@ -7,8 +7,8 @@
 
   var CEVAPLAR = [
     { k: /bütçe|butce|fiyat|maliyet|ücret|ucret|kaç para|kac para|senaryo/i,
-      c: 'Üç bütçe senaryosu hazır: MİNİMUM (~€12,5K+₺225K), ÖNERİLEN ★ (~€31K+₺630K) ve AGRESİF (~€67K+₺1.150K) — 6 aylık toplamlar. Teklif sekmesinde bileşenleri kendin seçip canlı toplamı görebilirsin.',
-      l: [['🧮 Teklif hesaplayıcı', 'teklif'], ['💰 Bütçe detayı', 'detay']] },
+      c: 'Üç bütçe senaryosu hazır: MİNİMUM (~€12,5K+₺225K), ÖNERİLEN ★ (~€31K+₺630K) ve AGRESİF (~€67K+₺1.150K) — 6 aylık toplamlar. Kalem kırılımını ve hangi senaryonun neyi kapsadığını Detay Strateji\'nin bütçe bölümünde bulabilirsin.',
+      l: [['💰 Bütçe detayı', 'detay'], ['✅ Senaryo seçimi', 'kararlar']] },
     { k: /takip|durum|ilerleme|ne zaman|hangi aşama|hangi asama|takvim|plan(?!lama)/i,
       c: 'Proje Takip Merkezi\'nde her kilometre taşının durumu, tarihi ve sorumlusu rozetli olarak duruyor — 2 iş şu an sizin aksiyonunuzda görünüyor.',
       l: [['📡 Takip Merkezi', 'takip']] },

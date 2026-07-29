@@ -304,8 +304,15 @@ html[data-tema="acik"] .gun h6,html[data-tema="sade"] .gun h6{color:#075e70}
 .menu-btn{display:none}
 @media(max-width:820px){
   /* backdrop-filter, içindeki position:fixed panelini kendine hapsediyordu — mobilde kapalı */
-  .topbar{gap:8px;padding:9px 14px;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--bg)}
-  .brand{font-size:14px;min-width:0;flex:1}
+  .topbar{gap:8px;padding:8px 12px;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--bg);flex-wrap:nowrap}
+  /* logo tek satırda kalsın — sarınca üst çubuk bozuluyordu */
+  .brand{font-size:13.5px;min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand>span:not(.brand-mark){display:none}
+  /* tema seçici mobilde daha derli toplu */
+  .tema-sec{padding:3px;gap:2px}
+  .tema-sec button{width:28px;height:26px}
+  .tema-sec button svg{width:15px;height:15px}
+  .cikis-btn{width:29px;height:29px;margin-left:4px}
   .menu-btn{display:grid;place-items:center;width:36px;height:34px;flex:0 0 auto;order:9;
     border:1px solid var(--line);border-radius:10px;background:linear-gradient(180deg,var(--surface-2),var(--surface));
     color:var(--text);cursor:pointer;padding:0;transition:transform .18s,border-color .18s}
@@ -344,7 +351,10 @@ html[data-tema="acik"] .gun h6,html[data-tema="sade"] .gun h6{color:#075e70}
 @media(max-width:820px){
   .card,.kamp,.stat,.fstep,.gun,.vid,.month,.brow,details.bilgi{min-width:0}
   .card>*,.fstep>*,.gun>*{max-width:100%}
-  .card,.fstep,.gun,.saat p,.tick li,.strip{overflow-wrap:anywhere}
+  /* break-word: yalnız sığmayan uzun dizeleri kırar — 'anywhere' marka adlarını
+     ortadan bölüyordu (Hospitade|nt). Tablo hücrelerinde kırma tamamen kapalı. */
+  .card,.fstep,.gun,.saat p,.tick li,.strip{overflow-wrap:break-word}
+  .card table.t td,.card table.t th{overflow-wrap:normal;word-break:normal}
   .flow{flex-direction:column}
   .fstep{min-width:0;width:100%}
   .saat{grid-template-columns:64px 1fr;gap:9px}
@@ -354,8 +364,17 @@ html[data-tema="acik"] .gun h6,html[data-tema="sade"] .gun h6{color:#075e70}
   details.bilgi>summary{font-size:13px;padding:13px 14px}
   details.bilgi .ic{padding:4px 14px 16px}
   .rnk{flex-direction:column;gap:8px}
-  /* tablolar zaten .card[overflow-x:auto] içinde — sayfa değil kart kaysın */
-  .card>table.t,.card table.t{min-width:480px}
+  /* tablolar kart içinde kayar (sayfa kaymaz); kaydırılabildiği görünsün */
+  .card>table.t,.card table.t{min-width:440px}
+  .card:has(>table.t)::before{content:"⇄ tabloyu yana kaydırabilirsiniz";position:sticky;left:0;
+    display:block;font-size:10.5px;font-weight:600;letter-spacing:.03em;color:var(--cyan);
+    opacity:.75;margin-bottom:8px}
+  .card table.t th,.card table.t td{padding:8px 9px;font-size:11.5px}
+}
+
+@media(max-width:560px){
+  .card>table.t,.card table.t{min-width:400px}
+  .card table.t th,.card table.t td{padding:7px 8px;font-size:11px}
 }
 
 /* dar telefonlarda skor çubukları: etiket üstte, çubuk altta */

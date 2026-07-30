@@ -210,6 +210,194 @@
   </div>
 </section>
 
+<!-- ═══ BÜYÜME SİMÜLATÖRÜ ═══ -->
+<section class="blk" id="simulasyon">
+  <div class="wrap">
+    <div class="eyebrow">İnfografik 2 · İnteraktif</div>
+    <h2>📈 Kaç video? — kanal büyüme simülatörü</h2>
+    <p class="lead">"Ayda 6 mı, 8 mi?" sorusunun cevabı fikir değil <b>veri</b>. Aşağıdaki tablo 10,2 milyon YouTube kanalının ölçülmüş büyüme kademelerinden geliyor. Kaydırıcıları oynatın, kendi kanalınızın 12 aylık izini görün.</p>
+
+    <div class="sim">
+      <div class="sim-kontrol">
+        <div class="sim-grup">
+          <span class="sim-et">Kanal</span>
+          <div class="sim-sec" data-sim="kanal">
+            <button type="button" class="on" data-deger="tr">🇹🇷 Smile Group TR</button>
+            <button type="button" data-deger="int">🌍 International</button>
+          </div>
+        </div>
+        <div class="sim-grup">
+          <span class="sim-et">Ayda kaç <b>16:9 uzun video</b>?</span>
+          <div class="sim-sec" data-sim="uzun">
+            <button type="button" data-deger="4">4</button>
+            <button type="button" data-deger="6">6</button>
+            <button type="button" class="on" data-deger="8">8</button>
+            <button type="button" data-deger="10">10</button>
+          </div>
+        </div>
+        <div class="sim-grup">
+          <span class="sim-et">Ayda 12 dikey çekim <b>Shorts olarak da</b> bu kanala yüklensin mi?</span>
+          <div class="sim-sec" data-sim="shorts">
+            <button type="button" class="on" data-deger="evet">Evet — Shorts'a da koy</button>
+            <button type="button" data-deger="hayir">Hayır — yalnız Meta'ya</button>
+          </div>
+        </div>
+        <div class="sim-grup">
+          <span class="sim-et">Video başına izlenme <b>senaryosu</b></span>
+          <div class="sim-sec" data-sim="senaryo">
+            <button type="button" data-deger="dusuk">Temkinli</button>
+            <button type="button" class="on" data-deger="orta">Gerçekçi</button>
+            <button type="button" data-deger="iyi">İyi giden</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="sim-cikti">
+        <div class="sim-kutu">
+          <span class="sim-kb">Toplam aylık yükleme</span>
+          <b id="sim-kadans">20</b>
+          <span class="sim-alt" id="sim-kademe">12+ kademesi — en üst bant</span>
+        </div>
+        <div class="sim-kutu">
+          <span class="sim-kb">Aylık izlenme büyümesi</span>
+          <b id="sim-izlenme">%2,18</b>
+          <span class="sim-alt">medyan, 2,7 milyon kanal</span>
+        </div>
+        <div class="sim-kutu">
+          <span class="sim-kb">Aylık abone büyümesi</span>
+          <b id="sim-abone">%0,91</b>
+          <span class="sim-alt">medyan, aynı kademe</span>
+        </div>
+        <div class="sim-kutu vurgu">
+          <span class="sim-kb">12 ay sonunda abone</span>
+          <b id="sim-yil">—</b>
+          <span class="sim-alt" id="sim-yil-alt">bileşik, mevcut tabandan</span>
+        </div>
+      </div>
+
+      <div class="sim-bar">
+        <div class="brow" style="grid-template-columns:132px 1fr 96px"><span class="lbl">&lt;1 video/ay</span><div class="btrack"><div class="bfill" data-k="0" style="width:24%;background:var(--muted-2)"></div></div><span class="val">%0,53</span></div>
+        <div class="brow" style="grid-template-columns:132px 1fr 96px"><span class="lbl">1-3 video/ay</span><div class="btrack"><div class="bfill" data-k="1" style="width:41%;background:var(--muted-2)"></div></div><span class="val">%0,89</span></div>
+        <div class="brow" style="grid-template-columns:132px 1fr 96px"><span class="lbl">4-7 video/ay</span><div class="btrack"><div class="bfill" data-k="2" style="width:61%;background:var(--de)"></div></div><span class="val">%1,32</span></div>
+        <div class="brow" style="grid-template-columns:132px 1fr 96px"><span class="lbl">8-11 video/ay</span><div class="btrack"><div class="bfill" data-k="3" style="width:78%;background:var(--uk)"></div></div><span class="val">%1,70</span></div>
+        <div class="brow" style="grid-template-columns:132px 1fr 96px"><span class="lbl">12+ video/ay</span><div class="btrack"><div class="bfill" data-k="4" style="width:100%;background:var(--tr)"></div></div><span class="val">%2,18</span></div>
+        <p class="sim-not">Aylık medyan <b>izlenme</b> büyümesi, yayın sıklığı kademelerine göre. Seçtiğiniz kademe vurgulanır.</p>
+      </div>
+
+      <div class="sim-yorum" id="sim-yorum"></div>
+
+      <div class="sim-hacim">
+        <div class="sim-hbaslik">
+          <span class="pill p-cyan">12 AY SONUNDA</span>
+          <h3>Kütüphane ve hacim projeksiyonu</h3>
+          <p>Kademe yüzdeleri göreli büyümeyi anlatır; bu blok <b>mutlak sayıyı</b> gösterir — kaç video, kaç izlenme, kaç abone.</p>
+        </div>
+        <div class="sim-cikti">
+          <div class="sim-kutu"><span class="sim-kb">Kütüphane</span><b id="h-video">—</b><span class="sim-alt" id="h-video-alt">uzun video · Shorts</span></div>
+          <div class="sim-kutu"><span class="sim-kb">Toplam izlenme</span><b id="h-izlenme">—</b><span class="sim-alt">12 ay birikimli</span></div>
+          <div class="sim-kutu"><span class="sim-kb">Kazanılan abone</span><b id="h-abone">—</b><span class="sim-alt" id="h-abone-alt">organik, reklamsız</span></div>
+          <div class="sim-kutu vurgu"><span class="sim-kb">Video başına maliyet etkisi</span><b id="h-verim">—</b><span class="sim-alt">izlenme / video</span></div>
+        </div>
+        <p class="sim-not"><b>Model:</b> uzun videoda 1.000 izlenme başına 3-5 abone, Shorts'ta 10.000 izlenme başına ~17 abone (ölçülmüş oranlar). Videoların %7'sinden azı evergreen olduğu için kuyruk katsayısı ihtiyatlı tutuldu: ilk 30 gün sonrası ek izlenme, 30. gün izlenmesinin %15-30'u. <b>Video başına izlenme bir varsayımdır</b> — diş hekimliği kategorisi için yayımlanmış birincil veri yok; üç senaryo bu belirsizliği açıkça gösterir.</p>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card">
+        <h3>🔍 Bu veri nereden geliyor?</h3>
+        <ul class="tick" style="margin-top:10px">
+          <li><b>Kaynak:</b> vidIQ "YouTube Upload Frequency Study" — 10.210.278 kanal, Nisan 2025 – Mart 2026 ölçüm penceresi, yayın Temmuz 2026.</li>
+          <li><b>Medyan kullanılmış</b> (ortalama değil) — tek bir viral video sonuçları şişirmiyor.</li>
+          <li><b>Örneklem:</b> en az 1.000 aboneli kanallar. Sıfırdan açılan kanalın ilk ayları bu evrende yok.</li>
+          <li><b>Kadans sayımı uzun video + Shorts birlikte</b> yapılıyor — simülatördeki Shorts anahtarının sebebi bu.</li>
+        </ul>
+      </div>
+      <div class="card alt">
+        <h3>⚖️ Dürüst şerhler</h3>
+        <ul class="tick" style="margin-top:10px">
+          <li><b>Bu korelasyondur, nedensellik değil.</b> Çok yayınlayan kanallar aynı zamanda daha kaynaklı kanallardır. Garanti değil, <b>kademe ilişkisi</b> olarak okuyun.</li>
+          <li><b>Türkiye ve diş hekimliği kırılımı yok</b> — rakamlar küresel medyandır.</li>
+          <li><b>Karşı bulgu:</b> bir başka çalışma sağlık dikeyinde ayda ~5 uzun videodan sonra doygunluk olabileceğini söylüyor (zayıf kanıt, Shorts hariç, yalnız İngilizce pazarlar).</li>
+          <li><b>Gerçek karar metriği abone değil</b> nitelikli konsültasyon talebi ve video başına maliyettir. İlk 90 günde kendi kanal verimizle kalibre edeceğiz.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REKLAM MODELLERİ ═══ -->
+<section class="blk" id="reklam">
+  <div class="wrap">
+    <div class="eyebrow">İnfografik 3</div>
+    <h2>📣 Kanala uygulanacak reklam modelleri</h2>
+    <p class="lead">Organik yayın kanalı büyütür ama <b>yavaş</b>. Reklam, doğru sırayla uygulandığında kanalı 6 ayda kurar. Sıra yanlış olursa bütçe yanar: kimse abone olmadan dönüşüm kampanyası açmak, boş vitrine reklam vermektir.</p>
+
+    <div class="flow">
+      <div class="fstep" style="border-color:rgba(34,211,238,.4)">
+        <span class="fn">FAZ 1 · AY 1-2</span><h5>Video views — liste kurma</h5>
+        <p><b>Kampanya:</b> Video views (multi-format: in-stream + in-feed + Shorts)<br><b>Amaç:</b> gerçek CPV/CPM'i ölçmek ve <b>11+ saniye izleyen havuzunu</b> biriktirmek.<br><b>Bu havuz olmadan sonraki fazlar çalışmaz.</b></p>
+      </div>
+      <div class="fok">→</div>
+      <div class="fstep">
+        <span class="fn">FAZ 2 · AY 2-4</span><h5>Demand Gen — abone dönüşümü</h5>
+        <p><b>Kampanya:</b> Demand Gen, hedef "YouTube engagements" → <b>Channel Subscriptions</b> optimizasyonu.<br><b>Kitle:</b> Faz 1'de biriken izleyiciler.<br><b>Teklif:</b> ilk 14 gün Maximize Conversions, ~50 dönüşüm sonrası Target CPA.</p>
+      </div>
+      <div class="fok">→</div>
+      <div class="fstep">
+        <span class="fn">FAZ 3 · AY 4+</span><h5>Dönüşüm — hasta kazanımı</h5>
+        <p><b>Kampanya:</b> Demand Gen (dönüşüm hedefli) + gerekirse Video "Drive conversions".<br><b>Kitle:</b> abone olanlar + belirli videoları izleyenler + site ziyaretçileri.<br><b>Ölçü:</b> nitelikli konsültasyon talebi.</p>
+      </div>
+      <div class="fok">→</div>
+      <div class="fstep" style="border-color:rgba(52,211,153,.45)">
+        <span class="fn">FAZ 4 · ÖLÇEK</span><h5>Reach &amp; bumper</h5>
+        <p><b>En sona bırakılır</b>, başa değil. Marka bilinirliğini ölçeklerken devreye girer: bumper (6 sn), non-skippable, target frequency.</p>
+      </div>
+    </div>
+
+    <div class="card" style="overflow-x:auto;margin-top:16px">
+      <h3>Kampanya türleri — hangisi ne işe yarar</h3>
+      <table class="t" style="margin-top:10px">
+        <tr><th>Kampanya</th><th>Nerede yayınlanır</th><th>Ne için</th><th>Teklif</th></tr>
+        <tr><td><b>Video views</b><br><span style="font-size:11px;color:var(--muted-2)">multi-format</span></td><td>Skippable in-stream · in-feed · <b>Shorts</b></td><td>İzlenme + izleyici havuzu kurma. Shorts reklamı <b>yalnız</b> bu tür içinden alınabiliyor.</td><td>Max CPV / Target CPM</td></tr>
+        <tr><td><b>Demand Gen</b><br><span style="font-size:11px;color:var(--muted-2)">2026'nın ana motoru</span></td><td>Shorts · in-feed · Home · watch next · Search · Discover · Gmail · Maps</td><td>Abone kazanımı (Channel Subscriptions) ve dönüşüm. CTA butonu <b>SUBSCRIBE</b>'a dönüşür.</td><td>Max Conversions → Target CPA</td></tr>
+        <tr><td><b>Video reach</b></td><td>Bumper · non-skippable · target frequency</td><td>Geniş erişim, marka hatırlanırlığı. Ölçek fazında.</td><td>Target CPM</td></tr>
+        <tr><td><b>Ad sequence</b></td><td>Yalnız YouTube</td><td>Sıralı anlatı: itiraz → kanıt → teklif. Sağlık turizminde ikna zinciri için biçilmiş kaftan.</td><td>Target CPM / Max CPV</td></tr>
+        <tr><td colspan="4" style="font-size:11.5px;color:var(--muted-2)"><b>Zorunlu ön koşul:</b> Demand Gen abone hedefi için Google Ads hesabı YouTube kanalıyla bağlı olmalı; yalnız YouTube envanterinde yayınlanır (video partnerlerinde ve oturumu kapalı izleyicide çıkmaz). <b>Takvim:</b> Ağustos 2026'dan itibaren TrueView in-stream/in-feed kampanyaları otomatik olarak multi-format'a yükseltiliyor.</td></tr>
+      </table>
+    </div>
+
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card">
+        <h3>💰 Maliyet bantları — dürüst tablo</h3>
+        <div class="bars" style="margin-top:10px">
+          <div class="brow" style="grid-template-columns:150px 1fr 92px"><span class="lbl">Skippable in-stream</span><div class="btrack"><div class="bfill" style="width:75%;background:var(--uk)"></div></div><span class="val">$5-10 CPM</span></div>
+          <div class="brow" style="grid-template-columns:150px 1fr 92px"><span class="lbl">In-feed / Discovery</span><div class="btrack"><div class="bfill" style="width:60%;background:var(--uk)"></div></div><span class="val">$3-8 CPM</span></div>
+          <div class="brow" style="grid-template-columns:150px 1fr 92px"><span class="lbl">Shorts</span><div class="btrack"><div class="bfill" style="width:32%;background:var(--tr)"></div></div><span class="val">~$4 CPM</span></div>
+          <div class="brow" style="grid-template-columns:150px 1fr 92px"><span class="lbl">Bumper (6 sn)</span><div class="btrack"><div class="bfill" style="width:28%;background:var(--tr)"></div></div><span class="val">$3,2-4,4</span></div>
+          <div class="brow" style="grid-template-columns:150px 1fr 92px"><span class="lbl">Avrupa ortalaması</span><div class="btrack"><div class="bfill" style="width:100%;background:var(--de)"></div></div><span class="val">$15-25 CPM</span></div>
+        </div>
+        <div class="strip" style="margin-top:12px"><b>⚠️ Türkiye için güvenilir CPV/CPM verisi yok.</b> Bulunan kaynaklar birbiriyle 10-100 kat çelişiyor (bir kaynak CPV 3,45 TL derken diğeri 0,02 TL diyor). Ayrıca internetteki "ülkeye göre CPM" içeriklerinin çoğu <b>kreatör kazancını</b> ölçüyor, reklamverenin ödediğini değil. <b>Yöntem:</b> ilk 2 haftada düşük bütçeli test kampanyasıyla kendi gerçek maliyetimizi ölçüp bütçeyi ona göre kuracağız.</div>
+      </div>
+      <div class="card alt">
+        <h3>🗓️ Mevsimsellik — ne zaman ucuz, ne zaman pahalı</h3>
+        <div class="bars" style="margin-top:10px">
+          <div class="brow" style="grid-template-columns:120px 1fr 100px"><span class="lbl">Oca-Şub</span><div class="btrack"><div class="bfill" style="width:32%;background:var(--ok)"></div></div><span class="val">en ucuz</span></div>
+          <div class="brow" style="grid-template-columns:120px 1fr 100px"><span class="lbl">Tem-Ağu</span><div class="btrack"><div class="bfill" style="width:36%;background:var(--ok)"></div></div><span class="val">dip</span></div>
+          <div class="brow" style="grid-template-columns:120px 1fr 100px"><span class="lbl">Eki-Kas</span><div class="btrack"><div class="bfill" style="width:82%;background:var(--warn)"></div></div><span class="val">+%30-50</span></div>
+          <div class="brow" style="grid-template-columns:120px 1fr 100px"><span class="lbl">Aralık</span><div class="btrack"><div class="bfill" style="width:100%;background:var(--fr)"></div></div><span class="val">zirve</span></div>
+        </div>
+        <ul class="tick" style="margin-top:12px">
+          <li><b>Stratejik sonuç:</b> Ağustos-Eylül'de <b>ucuz izlenme</b> alıp havuz kurulur; Ekim-Aralık'ta pahalı dönemde yalnız <b>dönüşüm</b> kampanyası döner.</li>
+          <li><b>Abone kampanyası avantajı:</b> abone odaklı kampanyalar klasik in-feed'e göre %50+ daha verimli; ABD dışı hedeflemede abone başına maliyet belirgin şekilde düşük.</li>
+          <li><b>Faz 1 bütçesi küçük tutulur</b> — amaç harcamak değil, gerçek CPV'yi öğrenmek.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="strip g" style="margin-top:14px"><b>Mevzuat kapısı:</b> TR kanalın reklamı yalnız <b>bilgilendirme</b> içeriğini dağıtır — fiyat, kampanya, hasta deneyimi taşıyan kreatif Türkçe yayınlanmaz. Fiyatlı ve teklifli reklam setleri <b>yabancı dilde ve yurt dışı hedeflemeyle</b> çalışır (Madde 8/3). Reklam setinde dil hedefi Türkçe seçilmez.</div>
+  </div>
+</section>
+
 <!-- ═══ BÖLÜM ANATOMİSİ ═══ -->
 <section class="blk" id="anatomi">
   <div class="wrap">
@@ -318,6 +506,126 @@
       <a href="uretim.html">🎬 Üretim İş Akışı</a>
       <a href="sosyal.html#yayin">🗓️ 6 aylık yayın projeksiyonu</a>
     </div>
+
+<script>
+/* ═══ KANAL BÜYÜME SİMÜLATÖRÜ ═══
+   Kademe verisi: vidIQ "YouTube Upload Frequency Study" (10.210.278 kanal,
+   Nis 2025-Mar 2026, ≥1.000 abone, medyan aylık büyüme, uzun video + Shorts birlikte). */
+(function () {
+  var KADEME = [
+    { ad: '<1 kademesi', esik: 1, izlenme: 0.53, abone: 0.00, n: '1,9 mn kanal' },
+    { ad: '1-3 kademesi', esik: 4, izlenme: 0.89, abone: 0.10, n: '2,5 mn kanal' },
+    { ad: '4-7 kademesi', esik: 8, izlenme: 1.32, abone: 0.39, n: '2,0 mn kanal' },
+    { ad: '8-11 kademesi', esik: 12, izlenme: 1.70, abone: 0.63, n: '1,1 mn kanal' },
+    { ad: '12+ kademesi — en üst bant', esik: 1e9, izlenme: 2.18, abone: 0.91, n: '2,7 mn kanal' }
+  ];
+  // Kanal başlangıç tabanları — Karne sayfasındaki başlangıç ölçümüyle tutarlı
+  var KANAL = { tr: { ad: 'Smile Group TR', taban: 1000 }, int: { ad: 'International', taban: 500 } };
+
+  /* Hacim modeli — kanal olgunlaştıkça video başına izlenme artar.
+     [1. ay, 12. ay] uzun video ve Shorts için ayrı bantlar. Varsayımdır; kategoriye özel yayımlanmış veri yok. */
+  var SENARYO = {
+    dusuk: { ad: 'Temkinli', uzunBas: 80, uzunSon: 350, shortBas: 400, shortSon: 1500 },
+    orta: { ad: 'Gerçekçi', uzunBas: 150, uzunSon: 900, shortBas: 900, shortSon: 4000 },
+    iyi: { ad: 'İyi giden', uzunBas: 300, uzunSon: 2200, shortBas: 2000, shortSon: 12000 }
+  };
+  var KUYRUK = 1.22;          // 30 gün sonrası ek izlenme ~%15-30 → ihtiyatlı orta
+  var ABONE_UZUN = 0.004;     // 1.000 izlenme başına 3-5 abone
+  var ABONE_SHORT = 0.00169;  // 10.000 Shorts izlenmesi başına ~16,9 abone
+
+  var secim = { kanal: 'tr', uzun: 8, shorts: 'evet', senaryo: 'orta' };
+  var kok = document.getElementById('simulasyon');
+  if (!kok) return;
+
+  function kademeBul(k) { for (var i = 0; i < KADEME.length; i++) if (k < KADEME[i].esik) return i; return 4; }
+  function bicim(n) { return n.toLocaleString('tr-TR', { maximumFractionDigits: 0 }); }
+  function yuzde(n) { return '%' + n.toFixed(2).replace('.', ','); }
+
+  function ciz() {
+    var kadans = secim.uzun + (secim.shorts === 'evet' ? 12 : 0);
+    var ki = kademeBul(kadans), k = KADEME[ki];
+    var kanal = KANAL[secim.kanal];
+    var yilAbone = Math.round(kanal.taban * Math.pow(1 + k.abone / 100, 12));
+    var artis = yilAbone - kanal.taban;
+
+    kok.querySelector('#sim-kadans').textContent = kadans;
+    kok.querySelector('#sim-kademe').textContent = k.ad;
+    kok.querySelector('#sim-izlenme').textContent = yuzde(k.izlenme);
+    kok.querySelector('#sim-abone').textContent = yuzde(k.abone);
+    kok.querySelector('#sim-yil').textContent = bicim(yilAbone);
+    kok.querySelector('#sim-yil-alt').textContent = bicim(kanal.taban) + ' tabandan +' + bicim(artis) + ' (bileşik)';
+
+    [].forEach.call(kok.querySelectorAll('.sim-bar .bfill'), function (b) {
+      b.style.opacity = (+b.dataset.k === ki) ? '1' : '.28';
+    });
+    [].forEach.call(kok.querySelectorAll('.sim-bar .brow'), function (r, i) {
+      r.classList.toggle('aktif', i === ki);
+    });
+
+    // yorum — seçime göre dürüst okuma
+    var y = kok.querySelector('#sim-yorum'), metin;
+    if (secim.shorts === 'evet') {
+      metin = '<b>Dikkat — argümanın gerçek hâli:</b> 12 dikey içeriği Shorts olarak bu kanala da yüklediğinizde toplam kadans <b>' + kadans + '</b> oluyor ve kanal <b>uzun video sayısından bağımsız olarak</b> en üst kademede kalıyor. ' +
+        (secim.uzun >= 6
+          ? 'Yani "6 mı 8 mi" tartışması bu kurguda büyüme kademesini değiştirmiyor — 8\'i savunma gerekçesi <b>kadans değil kütüphane derinliği</b> olmalı: her uzun video arama sonuçlarında kalıcı bir varlıktır, Shorts değildir.'
+          : 'Uzun videoyu 4\'te tutmak kademeyi düşürmez ama <b>arama görünürlüğü</b> kaybettirir: Shorts arama sonuçlarında uzun video kadar kalıcı değildir.');
+    } else {
+      var altKi = kademeBul(secim.uzun), alt = KADEME[altKi];
+      metin = '<b>Dikeyler yalnız Meta\'ya gidiyor</b> — bu kurguda kanalın kademesini <b>yalnız uzun video sayısı</b> belirliyor. Ayda ' + secim.uzun + ' video = <b>' + alt.ad + '</b>. ' +
+        (secim.uzun === 6
+          ? 'Ayda 8\'e çıkmak sizi bir üst kademeye taşır: abone büyümesi %0,39 → %0,63, yani <b>1,6 kat</b>. Asıl kaldıraç izlenmede değil <b>abonede</b> — sağlık turizmi hunisinin ağzı burasıdır.'
+          : secim.uzun === 8
+            ? 'Bu, 4-7 kademesine göre abonede <b>1,6 kat</b> daha hızlı büyüme demek. 10\'a çıkmak aynı kademede kalır — <b>8 en verimli eşik</b>.'
+            : secim.uzun === 10
+              ? '10 video 8 ile <b>aynı kademede</b> (8-11). Ek 2 video kademe atlatmıyor; bütçe 12+ bandına ulaşmak için Shorts\'a kaydırılmalı.'
+              : 'Ayda 4 video en alt verimli kademede bırakır. 6\'ya çıkmak bile aynı kademede (4-7) kalır — <b>kademe atlamak için 8 gerekir</b>.');
+    }
+    y.innerHTML = metin;
+    hacim();
+  }
+
+  /* ── Mutlak hacim: 12 ay boyunca ay ay biriken kütüphane ── */
+  function hacim() {
+    var s = SENARYO[secim.senaryo];
+    var shortAy = (secim.shorts === 'evet') ? 12 : 0;
+    var uzunIzlenme = 0, shortIzlenme = 0;
+
+    for (var ay = 1; ay <= 12; ay++) {
+      var t = (ay - 1) / 11;                                   // 0 → 1 olgunlaşma eğrisi
+      var vUzun = s.uzunBas + (s.uzunSon - s.uzunBas) * t;
+      var vShort = s.shortBas + (s.shortSon - s.shortBas) * t;
+      var kalanAy = 12 - ay + 1;                               // yayından sonra kaç ay kuyruk topladı
+      var kuyruk = 1 + (KUYRUK - 1) * Math.min(kalanAy / 6, 1); // 6 ayda kuyruğu dolar
+      uzunIzlenme += secim.uzun * vUzun * kuyruk;
+      shortIzlenme += shortAy * vShort * kuyruk;
+    }
+
+    var toplamIzlenme = uzunIzlenme + shortIzlenme;
+    var abone = uzunIzlenme * ABONE_UZUN + shortIzlenme * ABONE_SHORT;
+    var uzunAdet = secim.uzun * 12, shortAdet = shortAy * 12;
+
+    kok.querySelector('#h-video').textContent = bicim(uzunAdet + shortAdet);
+    kok.querySelector('#h-video-alt').textContent = bicim(uzunAdet) + ' uzun · ' + bicim(shortAdet) + ' Shorts';
+    kok.querySelector('#h-izlenme').textContent = bicim(toplamIzlenme);
+    kok.querySelector('#h-abone').textContent = '+' + bicim(abone);
+    kok.querySelector('#h-abone-alt').textContent = SENARYO[secim.senaryo].ad + ' senaryo · organik, reklamsız';
+    kok.querySelector('#h-verim').textContent = bicim(toplamIzlenme / (uzunAdet + shortAdet || 1));
+  }
+
+  [].forEach.call(kok.querySelectorAll('.sim-sec'), function (grup) {
+    grup.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (!b) return;
+      [].forEach.call(grup.children, function (x) { x.classList.toggle('on', x === b); });
+      var alan = grup.dataset.sim;
+      secim[alan] = (alan === 'uzun') ? +b.dataset.deger : b.dataset.deger;
+      ciz();
+    });
+  });
+
+  ciz();
+})();
+</script>
   </div>
 </section>
 

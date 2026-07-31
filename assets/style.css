@@ -436,7 +436,10 @@ html[data-tema="acik"] .giris-logo.logo-gunduz,html[data-tema="sade"] .giris-log
 /* ═══ MÜŞTERİ MARKA LOGOSU (brand içinde, tema duyarlı) ═══ */
 .brand{min-width:0;flex-wrap:nowrap}
 .brand .marka-ayrac{color:var(--muted-2);font-weight:300;font-size:15px;flex:0 0 auto}
-.brand .marka-logo{height:23px;width:auto;display:block;flex:0 0 auto}
+.brand .marka-logo{height:30px;width:auto;flex:0 0 auto}
+.brand .marka-logo.logo-gunduz{display:none}
+html[data-tema="acik"] .brand .marka-logo.logo-gece,html[data-tema="sade"] .brand .marka-logo.logo-gece{display:none}
+html[data-tema="acik"] .brand .marka-logo.logo-gunduz,html[data-tema="sade"] .brand .marka-logo.logo-gunduz{display:block}
 .brand .marka-ikon{display:none !important}
 @media(max-width:820px){
   /* dar ekranda yatay müşteri logosu yerine yalnız diş ikonu — iç içe girme olmaz */
@@ -447,7 +450,16 @@ html[data-tema="acik"] .giris-logo.logo-gunduz,html[data-tema="sade"] .giris-log
   html[data-tema="acik"] .brand .marka-ikon.logo-gece,html[data-tema="sade"] .brand .marka-ikon.logo-gece{display:none !important}
   html[data-tema="acik"] .brand .marka-ikon.logo-gunduz,html[data-tema="sade"] .brand .marka-ikon.logo-gunduz{display:block !important}
 }
-.giris-marka{height:34px;width:auto;display:block;margin:14px auto 6px}
+.giris-marka{height:40px;width:auto;display:block;margin:14px auto 6px}
 .giris-marka.logo-gunduz{display:none}
 html[data-tema="acik"] .giris-marka.logo-gece,html[data-tema="sade"] .giris-marka.logo-gece{display:none}
 html[data-tema="acik"] .giris-marka.logo-gunduz,html[data-tema="sade"] .giris-marka.logo-gunduz{display:block;margin:14px auto 6px}
+
+/* footer imza logoları */
+.signature img.sig-logo{height:22px;width:auto}
+.signature img.sig-logo.logo-gunduz,.alt-imza img.logo-gunduz{display:none}
+html[data-tema="acik"] .signature img.sig-logo.logo-gece,html[data-tema="sade"] .signature img.sig-logo.logo-gece,
+html[data-tema="acik"] .alt-imza img.logo-gece,html[data-tema="sade"] .alt-imza img.logo-gece{display:none}
+html[data-tema="acik"] .signature img.sig-logo.logo-gunduz,html[data-tema="sade"] .signature img.sig-logo.logo-gunduz,
+html[data-tema="acik"] .alt-imza img.logo-gunduz,html[data-tema="sade"] .alt-imza img.logo-gunduz{display:inline-block}
+.alt-imza img{height:13px;width:auto;vertical-align:-2px;display:inline-block}
